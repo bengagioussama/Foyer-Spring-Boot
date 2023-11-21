@@ -13,10 +13,8 @@ public class Foyer {
     @Column(name = "idFoyer")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private String nomFoyer;
     private long capaciteFoyer;
-
     @OneToOne(mappedBy = "foyer")
     private Universite universite;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "foyer")
