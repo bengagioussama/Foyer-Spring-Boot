@@ -2,12 +2,21 @@ package com.example.foyer_oussama_bengagi.DAO.Entities;
 
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Set;
 
-@Entity
-@Table(name="Bloc")
 
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
+@Builder
+@Table(name="Bloc")
 public class Bloc {
     @Id
     @Column(name = "idBloc")
@@ -20,6 +29,8 @@ public class Bloc {
     Foyer foyer;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "bloc")
     Set<Chambre> chambres;
+
+
 
 
 }
