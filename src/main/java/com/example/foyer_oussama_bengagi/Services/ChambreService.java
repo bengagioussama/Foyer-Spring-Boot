@@ -1,12 +1,9 @@
 package com.example.foyer_oussama_bengagi.Services;
-
-
 import com.example.foyer_oussama_bengagi.DAO.Entities.Bloc;
 import com.example.foyer_oussama_bengagi.DAO.Entities.Chambre;
 import com.example.foyer_oussama_bengagi.DAO.Repository.ChambreRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -17,33 +14,33 @@ ChambreRepository chambreRepository;
 
 
     @Override
-    public Bloc addChmabre(Chambre c) {
-        return null;
+    public Chambre addChmabre(Chambre c) {
+        return chambreRepository.save(c);
     }
 
     @Override
     public List<Chambre> addAllChambres(List<Chambre> chambres) {
-        return null;
+        return chambreRepository.saveAll(chambres);
     }
 
     @Override
-    public Bloc updateChambre(Chambre c) {
-        return null;
+    public Chambre updateChambre(Chambre c) {
+        return chambreRepository.save(c);
     }
 
     @Override
     public List<Chambre> updateAllChambres(List<Chambre> chambres) {
-        return null;
+        return chambreRepository.saveAll(chambres);
     }
 
     @Override
     public List<Chambre> findAllChambres() {
-        return null;
+        return chambreRepository.findAll();
     }
 
     @Override
-    public Bloc findChambreById(long id) {
-        return null;
+    public Chambre findChambreById(long id) {
+       return  chambreRepository.findById(id).orElse(Bloc.builder().id(0).nomBloc("Chambre").build());
     }
 
     @Override
