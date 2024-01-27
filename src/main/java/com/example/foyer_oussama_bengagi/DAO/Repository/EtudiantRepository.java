@@ -11,9 +11,8 @@ import java.util.List;
 
 @Repository
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
-    // select * from etudiant where cin = ....
 
-    Etudiant findByCin(long cin);
+ /*   Etudiant findByCin(long cin);
     List<Etudiant> findByNomEtLike(String nom);
     List<Etudiant> findByNomEtContains(String nom);
     List<Etudiant> findByNomEtContaining(String nom);
@@ -25,6 +24,6 @@ public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
     List<Etudiant> findByReservationsAnnee(int annee);
     List<Etudiant> findByEcoleNomAndDateNaissanceAfter(String ecole, Date date);
     List<Etudiant> findByReservationsAnneeOrderByDateNaissanceAsc(int annee);
-
+*/
 
 }

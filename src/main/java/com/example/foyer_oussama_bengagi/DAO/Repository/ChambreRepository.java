@@ -10,12 +10,12 @@ import java.util.List;
 
 @Repository
 public interface ChambreRepository extends JpaRepository<Chambre,Long> {
-
+/*
     Chambre findByNumeroChambre(Long numeroChambre);
     List<Chambre> findByTypeChambre(TypeChambre type);
     List<Chambre> findByBloc(Bloc bloc);
     List<Chambre> findByBlocAndTypeChambre(Bloc bloc, TypeChambre type);
     Chambre findByNumeroChambreAndTypeChambre(Long numeroChambre, TypeChambre type);
-
+*/
 
 }

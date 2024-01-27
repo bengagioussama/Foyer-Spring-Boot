@@ -12,7 +12,7 @@ public class Universite {
     private long id;
     private String nomUniversite;
     private String adresse;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL) // Ajout , Modif , Supp
     private Foyer foyer;
 
 }

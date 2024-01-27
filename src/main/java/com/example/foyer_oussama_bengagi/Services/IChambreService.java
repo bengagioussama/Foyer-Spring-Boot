@@ -1,5 +1,6 @@
 package com.example.foyer_oussama_bengagi.Services;
 
+import com.example.foyer_oussama_bengagi.DAO.Entities.Bloc;
 import com.example.foyer_oussama_bengagi.DAO.Entities.Chambre;
 
 import java.util.List;
@@ -15,4 +16,5 @@ public interface IChambreService {
     Chambre findChambreById(long id);
     void deleteChambre(Chambre c);
     void deleteChambreById(long id);
+    Bloc affecterChambresABloc(List<Long> numChambre, String nomBloc);
 }

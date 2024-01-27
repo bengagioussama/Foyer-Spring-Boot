@@ -1,11 +1,17 @@
 package com.example.foyer_oussama_bengagi.DAO.Entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="Chambre")
 public class Chambre {
     @Id

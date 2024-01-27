@@ -14,6 +14,6 @@ public interface UniversiteRepository extends JpaRepository<Universite,Long> {
     // noms contiennet la chaine de caractère en paramètre et leurs dates de
     // naissance entre deux dates passées en paramètre
 
-    List<Universite> findByNomEtudiantContains(String x, LocalDate date1, LocalDate date2);
+ //   List<Universite> findByNomEtudiantContains(String x, LocalDate date1, LocalDate date2);
 
 }

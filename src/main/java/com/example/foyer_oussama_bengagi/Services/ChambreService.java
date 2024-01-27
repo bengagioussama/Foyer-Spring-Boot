@@ -1,6 +1,7 @@
 package com.example.foyer_oussama_bengagi.Services;
 import com.example.foyer_oussama_bengagi.DAO.Entities.Bloc;
 import com.example.foyer_oussama_bengagi.DAO.Entities.Chambre;
+import com.example.foyer_oussama_bengagi.DAO.Repository.BlocRepository;
 import com.example.foyer_oussama_bengagi.DAO.Repository.ChambreRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.List;
 public class ChambreService implements IChambreService{
 
 ChambreRepository chambreRepository;
+BlocRepository blocRepository;
 
 
     @Override
@@ -40,7 +42,7 @@ ChambreRepository chambreRepository;
 
     @Override
     public Chambre findChambreById(long id) {
-       return  chambreRepository.findById(id).orElse(Bloc.builder().id(0).nomBloc("Chambre").build());
+       return  chambreRepository.findById(id).orElse(Chambre.builder().id(0).numeroChambre(id).build());
     }
 
     @Override
@@ -50,6 +52,18 @@ ChambreRepository chambreRepository;
 
     @Override
     public void deleteChambreById(long id) {
+
+    }
+
+    @Override
+    public Bloc affecterChambresABloc(List<Long> numChambre, String nomBloc) {
+        List <Chambre> chambres =  chambreRepository.findAllById(numChambre);
+        Bloc bloc = blocRepository.findByNomBloc(nomBloc);
+        while (!chambres.isEmpty()) {
+           bloc.getChambres().add(chambres.get(0));
+           chambres.remove(chambres.get(0));
+        }
+        return bloc;
 
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface FoyerRepository extends JpaRepository<Foyer,Long> {
-    Foyer findByNomFoyer(String nom);
+/*    Foyer findByNomFoyer(String nom);
     List<Foyer> findByCapaciteFoyerGreaterThan(int capacite);
     List<Foyer> findByCapaciteFoyerLessThan(int capacite);
     List<Foyer> findByCapaciteFoyerBetween(int min,int max);
@@ -21,6 +21,7 @@ public interface FoyerRepository extends JpaRepository<Foyer,Long> {
     List<Reservation> findByIdEtudiant(long idEtudiant);
     List<Reservation> findByAnneeUniversitaireAndEstValide(int anneeUniversitaire, boolean estValide);
 
+*/
 
 
 }
